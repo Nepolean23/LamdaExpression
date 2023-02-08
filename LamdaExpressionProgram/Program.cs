@@ -18,6 +18,11 @@ namespace LambdaExpression
             personlist.Add(new Person("129668", "Priyanshu", "Noida", 58));
             personlist.Add(new Person("126662", "Ankit", "Bhoma", 48));
 
+            Console.WriteLine("Retrieving Top 2 aged person from the list less than 60 years");
+            foreach (Person person in personlist.FindAll(e => (e.Age < 60)).Take(2).ToList())
+            {
+                Console.WriteLine("Name : " + person.Name + "\t\tAge : " + person.Age);
+            }
 
         }
     }
