@@ -34,6 +34,12 @@ namespace LambdaExpression
             double avgAge = personlist.Average(e => e.Age);
             Console.WriteLine("The avg age of all the people : " + avgAge);
 
+            Console.WriteLine("\nchecking whether the person name 'Sartaj' is present or not :");
+            if (personlist.Exists(e => e.Name == "Vishwas"))
+            {
+                Console.WriteLine("Yes the person naming Sartaj is present in the list");
+            }
+
 
         }
     }
